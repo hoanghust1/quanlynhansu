@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JSP Page</title>
+    <style>
+        .nut {
+                cursor: pointer;
+                padding: 8px 10px 8px 10px;
+                margin: 50px 0px 15px 0px;
+                color: #fff;
+                background-color: blue;
+            }
+        </style>
+</head>
+
+<body>
+    <a href="/views/themnhanvien.ejs">
+        <input type="submit" class="nut" value="Thêm Nhân Viên"></a>
+    <a href="/views/login.ejs" onclick="dangxuat()" style="float:right">Đăng Xuất</a>
+    <table border='1' width='100%' cellpadding='10' cellspacing='0'>
+        <caption>
+            <h1>Thông Tin Nhân Viên</h1>
+        </caption>
+        <tr style='border-bottom: 1px solid #ccc'>
+            <th>Mã Nhân Viên</th>
+            <th>Họ và Tên</th>
+            <th>Ngày Sinh</th>
+            <th>Giới Tính</th>
+            <th>Địa Chỉ</th>
+            <th>Số Điện Thoại</th>
+            <th>Tùy Chọn</th>
+        </tr>
+        <tbody>
+            <% nhanvien.forEach((nhanvien, index) => { %>
+            <tr>
+                <td>
+                    <%= nhanvien.manv %>
+                </td>
+                <td>
+                    <%= nhanvien.tennv %>
+                </td>
+                <td>
+                    <%= nhanvien.ngaysinh %>
+                </td>
+                <td>
+                    <%= nhanvien.gioitinh %>
+                </td>
+                <td>
+                    <%= nhanvien.diachi %>
+                </td>
+                <td>
+                    <%= nhanvien.sdt %>
+                </td>
+                <td><a href='/views/suanhanvien.ejs?manv='>Sửa</a>&nbsp;&nbsp; |
+                    &nbsp;&nbsp;
+                    <a href='/quanlynhansu1/xoa_nhanvien.jsp?manv='>Xóa</a></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+
+</html>

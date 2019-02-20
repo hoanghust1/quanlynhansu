@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <form id="themnv" method="POST">
+            <table width="95%">
+                <tr>
+                    <td style="float: right"><b>Mã Nhân Viên: </b></td>
+                    <td>
+                        <input type="text" id="manv">
+                </tr>
+                <tr>
+                    <td style="float: right"><b>Họ và Tên: </b></td>
+                    <td>
+                        <input type="text" id="tennv">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="float: right"><b>Ngày Sinh: </b></td>
+                    <td>
+                        <input type="date" id="ngaysinh">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="float: right"><b>Giới Tính:  </b></td>
+                    <td>
+                        <input type="radio" name="gioitinh" value="Nam">Nam
+                        <input type="radio" name="gioitinh" value="Nữ">Nữ
+                    </td>
+                </tr
+                <tr>
+                    <td style="float: right"><b>Địa Chỉ: </b></td>
+                    <td>
+                        <input type="text" id="diachi">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="float: right"><b>Sdt: </b></td>
+                    <td>
+                        <input type="text" id="sdt">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" value="Lưu dữ liệu" onclick="them(event)">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script src="/public/js/themnhanvien.js"></script>
+    </body>
+</html>
